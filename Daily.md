@@ -1,9 +1,9 @@
 # Godot Engine Learning Plan (AI generated)
 
 ## Day 1: Introduction to Godot
-- [ ] Download and install Godot Engine
-- [ ] Familiarize yourself with the Godot user interface
-- [ ] Follow the online tutorial "Learn GDScript From Zero"
+- [x] Download and install Godot Engine
+- [x] Familiarize yourself with the Godot user interface
+- [x] Follow the online tutorial "[Learn GDScript From Zero](https://docs.godotengine.org/en/3.5/getting_started/introduction/learn_to_code_with_gdscript.html)"
 
 ## Day 2: Basic Concepts
 - [ ] Learn about nodes and scenes in Godot
