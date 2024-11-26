@@ -6,9 +6,9 @@
 - [x] Follow the online tutorial "[Learn GDScript From Zero](https://docs.godotengine.org/en/3.5/getting_started/introduction/learn_to_code_with_gdscript.html)"
 
 ## Day 2: Basic Concepts
-- [ ] Learn about nodes and scenes in Godot
-- [ ] Create your first simple scene
-- [ ] Experiment with different types of nodes
+- [X] Learn about nodes and scenes in Godot
+- [x] Create your first simple scene
+- [x] Experiment with different types of nodes
 
 ## Day 3: Introduction to GDScript
 - [ ] Learn the basics of GDScript syntax
