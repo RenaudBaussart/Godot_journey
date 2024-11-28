@@ -10,16 +10,16 @@
 - [x] Create your first simple scene
 - [x] Experiment with different types of nodes
 
-## Day 3: Introduction to GDScript
+## Day 3: Introduction to GDScript (skip i use c#)
 - [ ] Learn the basics of GDScript syntax
 - [ ] Write your first simple scripts
 - [ ] Attach scripts to nodes and observe their behavior
 
 ## Day 4: Your First 2D Mini-Game (Part 1)
-- [ ] Start the tutorial "Your first 2D game"
-  - [ ] Set up the project
-  - [ ] Create the player character
-  - [ ] Add movement to the character
+- [x] Start the tutorial "[Your first 2D game](https://docs.godotengine.org/en/stable/getting_started/first_2d_game/index.html)"
+  - [x] Set up the project
+  - [x] Create the player character
+  - [x] Add movement to the character
 
 ## Day 5: Your First 2D Mini-Game (Part 2)
 - [ ] Continue the tutorial "Your first 2D game"
