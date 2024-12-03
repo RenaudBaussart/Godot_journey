@@ -1,0 +1,67 @@
+[gd_scene load_steps=10 format=3 uid="uid://bage8hxse3gc7"]
+
+[ext_resource type="Script" path="res://mob/Mob.cs" id="1_nikcg"]
+[ext_resource type="Texture2D" uid="uid://df0ho2awqdwpp" path="res://asset/art/enemyFlyingAlt_1.png" id="2_k5cjf"]
+[ext_resource type="Texture2D" uid="uid://c5x7f7eh0x86g" path="res://asset/art/enemyFlyingAlt_2.png" id="3_8xd7t"]
+[ext_resource type="Texture2D" uid="uid://dc57ctws8oird" path="res://asset/art/enemySwimming_1.png" id="4_0dhbg"]
+[ext_resource type="Texture2D" uid="uid://bt4dw65ufjn3o" path="res://asset/art/enemySwimming_2.png" id="5_01oo8"]
+[ext_resource type="Texture2D" uid="uid://c3cdejtij22s4" path="res://asset/art/enemyWalking_1.png" id="6_wqe3y"]
+[ext_resource type="Texture2D" uid="uid://dq5w6wwwuxuc4" path="res://asset/art/enemyWalking_2.png" id="7_aactv"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cvjjm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_k5cjf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_8xd7t")
+}],
+"loop": true,
+"name": &"fly",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_0dhbg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_01oo8")
+}],
+"loop": true,
+"name": &"swim",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_wqe3y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_aactv")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 3.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dbaj5"]
+radius = 23.0
+height = 56.0
+
+[node name="Mob" type="RigidBody2D"]
+collision_mask = 0
+gravity_scale = 0.0
+script = ExtResource("1_nikcg")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_cvjjm")
+animation = &"fly"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_dbaj5")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(-1, 2.38419e-07)
+scale = Vector2(2, 1.9)

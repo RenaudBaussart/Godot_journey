@@ -5,16 +5,21 @@ public partial class Player : Area2D
 	[Export]
 	public int Speed { get; set; } = 400; // How fast the player will move (pixels/sec).
 	public int NumberOfLife { get; set; } = 3; // How many hit the player take beffor die
+	
 	[Signal]
 	public delegate void HitEventHandler();
+	[Signal]
+	public delegate void DeathEventHandler();
+	
 	public Vector2 ScreenSize; // Size of the game window.
 	
 	public void OnBodyEntered(Node2D body){
 		EmitSignal(SignalName.Hit);
-		
+		NumberOfLife --;
 		if (NumberOfLife <= 0) {
 			Hide();
 			GetNode<CollisionShape2D>("HitBox2D").SetDeferred(CollisionShape2D.PropertyName.Disabled, true);
+			EmitSignal(SignalName.Death);
 		} 
 		
 	}
@@ -22,13 +27,14 @@ public partial class Player : Area2D
 	{
 		Position = position;
 		Show();
-		GetNode<CollisionShape2D>("CollisionShape2D").Disabled = false;
+		GetNode<CollisionShape2D>("HitBox2D").Disabled = false;
 		NumberOfLife = 3;
 	}
 	public override void _Ready()
 	{
 		ScreenSize = GetViewportRect().Size;
 		Hide();
+		BodyEntered += OnBodyEntered;
 	}
 	public override void _Process(double delta)
 	{

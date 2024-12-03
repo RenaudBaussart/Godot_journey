@@ -23,9 +23,9 @@
 
 ## Day 5: Your First 2D Mini-Game (Part 2)
 - [ ] Continue the tutorial "Your first 2D game"
-  - [ ] Create the game area
-  - [ ] Add enemies
-  - [ ] Implement collisions
+  - [x] Add enemies
+  - [x] Create the game area
+  - [x] Implement collisions
 
 ## Day 6: Your First 2D Mini-Game (Part 3)
 - [ ] Complete the tutorial "Your first 2D game"
